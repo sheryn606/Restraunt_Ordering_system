@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/* GLOBAL FONT RESET */
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+/* GLOBAL FONT OVERRIDE */
+html, body {
+  font-family: 'Macondo', cursive !important;
+}
+
+/* Angular Material + all components */
+* {
+  font-family: 'Macondo', cursive !important;
+}
+
+
+/* Basic polish */
+body {
+  margin: 0;
+  background-color: #fff7ed;
+  color: #1f2937;
+}
+.mat-typography,
+.mat-body,
+.mat-body-1,
+.mat-body-2,
+.mat-h1, .mat-h2, .mat-h3, .mat-h4, .mat-h5, .mat-h6,
+.mat-button,
+.mat-raised-button,
+.mat-flat-button,
+.mat-card,
+.mat-toolbar,
+button,
+input,
+textarea,
+select {
+  font-family: 'Macondo', cursive !important;
+}
+footer {
+  margin-top: 30rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+

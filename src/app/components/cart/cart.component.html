@@ -1,0 +1,20 @@
+<div class="container">
+
+  
+  <h1>🛒 Your Cart</h1>
+  <p *ngIf="cart.length === 0" class="empty-text">Your cart is feeling a little hungry 🍽️</p>
+  <p class="sub-text">Add some delicious items from the menu!</p>
+
+
+
+  <div class="menu-grid" *ngIf="cart.length > 0">
+    <div *ngFor="let item of cart; let i = index" class="card">
+      <img *ngIf="item.image" [src]="item.image" alt="{{item.name}}" class="menu-image" />
+      <h3>{{ item.name }}</h3>
+      <p>₹{{ item.price }}</p>
+      <button class="button" (click)="remove(i)">Remove</button>
+    </div>
+  </div>
+
+  <h3 *ngIf="cart.length > 0" class="center">Total: ₹{{ total }}</h3>
+</div>
