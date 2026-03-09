@@ -1,12 +1,19 @@
 <div class="container" style="text-align: center;">
   <h2>Our Menu</h2>
+  <input
+  type="text"
+  [(ngModel)]="search"
+  placeholder="Search dishes..."
+/>
   <div class="menu-grid">
-    <div *ngFor="let item of menu" class="card">
+    <div *ngFor="let item of menu | menuFilter:search" appHighlight class="card">
       <img *ngIf="item.image" [src]="item.image" alt="{{item.name}}" class="menu-image" />
       <h3>{{ item.name }}</h3>
       <p>{{ item.description }}</p>
-      <p class="price">₹{{ item.price }}</p>
+      <p class="price">{{item.price | currency:'INR'}}</p>
       <button class="button" (click)="addToCart(item)">Add to Cart</button>
     </div>
   </div>
 </div>
+
+

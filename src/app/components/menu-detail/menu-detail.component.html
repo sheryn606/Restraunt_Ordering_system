@@ -1,0 +1,23 @@
+<h2>Menu</h2>
+
+<input
+  type="text"
+  [(ngModel)]="search"
+  placeholder="Search dishes..."
+>
+
+<mat-card *ngFor="let item of menu | menuFilter:search" appHighlight>
+
+  <mat-card-title>{{item.name}}</mat-card-title>
+
+  <mat-card-content>
+    <p>{{item.description}}</p>
+    <p>{{item.price | currency:'INR'}}</p>
+  </mat-card-content>
+
+  <button mat-raised-button color="primary"
+          (click)="addToCart(item)">
+    Add to Cart
+  </button>
+
+</mat-card>

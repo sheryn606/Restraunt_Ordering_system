@@ -1,11 +1,11 @@
-<nav class="navbar">
-  <div class="logo">
-    🍴 MyRestaurant
-  </div>
+<mat-toolbar color="primary">
 
-  <ul class="nav-links">
-    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Menu</a></li>
-    <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
-    <li><a routerLink="/order" routerLinkActive="active">Checkout</a></li>
-  </ul>
-</nav>
+  <span>Restaurant App</span>
+
+  <span style="flex:1 1 auto"></span>
+
+  <button mat-button routerLink="/">Menu</button>
+  <button mat-button routerLink="/cart">Cart</button>
+  <button mat-button routerLink="/order">Order</button>
+
+</mat-toolbar>
